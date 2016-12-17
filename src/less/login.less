@@ -1,0 +1,99 @@
+@import "comon";
+html{
+  height: 100%;
+}
+body{
+  height:100%;
+  position: relative;
+  background:#040615 url("../images/login/bg.jpg") 0 0 no-repeat;
+}
+
+.main{
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top: -160px;
+  margin-left: -250px;
+  box-sizing: border-box;
+  padding: 15px;
+  width: 500px;
+  height: 320px;
+  background-color: @primary-wihte;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+//  显示logo{
+  .logo-show{
+    height: 80px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(241,241,243,0.6);
+    img{
+      height: 100%;
+    }
+  }
+//  登录信息
+  .info-box{
+      table{
+        width: 100%;
+        tr{
+          width: 100%;
+          .label{
+            width: 30%;
+            line-height: 50px;
+            text-align: right;
+          }
+          input{
+            display: inline-block;
+            width: 70%;
+            padding: 6px 12px;
+            font-size: 12px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            &:focus{
+              border-color: #66afe9;
+              outline: 0;
+              -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+              box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+            }
+          }
+          .test-code{
+            width: 40%;
+          }
+          .test-code-show{
+            width: 28%;
+            vertical-align: middle;
+            height: 30px;
+          }
+        //  登录按钮
+          button{
+            width: 100%;
+            margin-top: 15px;
+            background-color: #0093dd;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            height: 2.5em;
+            line-height: 2.5em;
+            border-radius: 5px;
+            border:none;
+            &:hover{
+              cursor: pointer;
+              background-color: #4493dd;
+            }
+          }
+        }
+      }
+  }
+}

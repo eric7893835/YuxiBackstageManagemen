@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动信息管理系统</title>
+    <meta name="keywords" content="钰晰,移动信息管理系统,钰晰后台管理系统"/>
+    <meta name="description" content="SMS后台管理" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--头部-->
+    <header>
+        <div class="logo">
+            <img src="images/index/logo.png" alt="">
+        </div>
+        <div class="operation-box">
+            <div class="basic-info">
+                <i>&#xe642;</i>
+                企业终端账户
+                <span class="user-name">admin</span>
+            </div>
+            <div class="operation-area">
+                <a href="index.html" title="首页">
+                    <i>&#xe629;</i>
+                </a>
+                <a href="alter-pwd" target="leftFrame" title="修改密码">
+                    <i>&#xe613;</i>
+                </a>
+                <a href="login.html" title="退出系统">
+                    <i>&#xe601;</i>
+                </a>
+            </div>
+        </div>
+    </header>
+<!--主要部分-->
+    <main class="container">
+        <!--左边侧边栏-->
+        <div class="sidebar">
+            <div class="sidebar-wrapper">
+                <ul class="main-nav">
+                    <li><a class="nav-top-item">
+                        <i>&#xe637;</i>
+                        短信管理
+                        <i class="dropdown">&#xe697;</i>
+                    </a>
+                        <ul style="display: none;">
+                            <li><a href="send-sms.html" target="leftFrame">发送短信</a></li>
+                            <li><a href="" target="leftFrame">循环发送</a></li>
+                            <li><a href="" target="leftFrame">个性化短信</a></li>
+                            <li><a href="" target="leftFrame">已完成任务</a></li>
+                            <li><a href="" target="leftFrame">审核失败</a></li>
+                            <li><a href="" target="leftFrame">定时任务</a></li>
+                            <li><a href="" target="leftFrame">循环短信</a></li>
+                            <li><a href="" target="leftFrame">回复短信</a></li>
+                            <li><a href="" target="leftFrame">短信草稿</a></li>
+                            <li><a href="" target="leftFrame">常用短信</a></li>
+                            <li><a href="" target="leftFrame">系统短语库</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-top-item">
+                        <i>&#xe637;</i>
+                        充值消费
+                        <i class="dropdown">&#xe697;</i>
+                    </a>
+                        <ul style="display: none;">
+                            <li><a href="" target="leftFrame">充值记录</a></li>
+                            <li><a href="" target="leftFrame">我的充值记录</a></li>
+                            <li><a href="" target="leftFrame">今日发送统计</a></li>
+                            <li><a href="" target="leftFrame">提交量统计报表</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-top-item">
+                        <i>&#xe637;</i>
+                        终端用户管理
+                        <i class="dropdown">&#xe697;</i>
+                    </a>
+                        <ul style="display: none;">
+                            <li><a href="" target="leftFrame">添加子用户</a></li>
+                            <li><a href="" target="leftFrame">子用户列表</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-top-item">
+                        <i>&#xe637;</i>
+                        定制管理
+                        <i class="dropdown">&#xe697;</i>
+                    </a>
+                        <ul style="display: none;">
+                            <li><a href="" target="leftFrame">签名管理</a></li>
+                            <li><a href="" target="leftFrame">IP绑定</a></li>
+                            <li><a href="" target="leftFrame">上行地址</a></li>
+                            <li><a href="" target="leftFrame">下行地址</a></li>
+                            <li><a href="" target="leftFrame">黑名单管理</a></li>
+                            <li><a href="" target="leftFrame">短信互动</a></li>
+                            <li><a href="" target="leftFrame">短信预警值设置</a></li>
+                            <li><a href="" target="leftFrame">留言/建议/意见...</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-top-item">
+                        <i>&#xe637;</i>
+                        通讯录
+                        <i class="dropdown">&#xe697;</i>
+                    </a>
+                        <ul style="display: none;">
+                            <li><a href="" target="leftFrame">通讯录</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-top-item">
+                        <i>&#xe637;</i>
+                        个人信息
+                        <i class="dropdown">&#xe697;</i>
+                    </a>
+                        <ul style="display: none;">
+                            <li><a href="" target="leftFrame">基本信息</a></li>
+                            <li><a href="" target="leftFrame">修改密码</a></li>
+                            <li><a href="" target="leftFrame">我的产品</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--右边主要内容-->
+        <div class="content">
+            <iframe  name="leftFrame" frameborder="0" scrolling="no" src="send-sms.html" style="visibility: inherit; width: 100%; z-index: 5; border: none" id="uBox" height="500"></iframe>
+        </div>
+    </main>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
