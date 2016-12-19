@@ -2,8 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/other-comon.css">
+
+    <!--时间控件-->
+    <script src="lib/My97DatePicker/WdatePicker.js"></script>
 </head>
 <body>
- aaaaaaaaaaaaaaaaa
+<header class="maintitle">
+    <div class="maintip">
+        <i>&#xe629;</i>
+        <span class="address-info"><strong>位置：</strong>发送短信【剩余短信条数：<span class="red">18</span>】</span>
+    </div>
+</header>
+
+<!--主要内容-->
+<article class="content-box role">
+    <div class="content-box-content">
+        <div class="tab-content default-tab" id="form" style="display: block; ">
+            <form id="submitfrom" action=" " method="post">
+                <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                    <tbody>
+                    <tr>
+                        <td class="label">选择产品：</td>
+                        <td class="table-content">
+                                <span>
+                                    <select name="pro_id" id="pro_id" onchange="">
+                                        <option value="">请选择相应产品</option>
+                                        <option value="33">优质验证码专用</option>
+                                        <option value="19">商超会员营销4</option>
+                                        <option value="5">管理商通知专用</option>
+
+                                    </select>
+                                </span>
+                            <span>操作当前页面前请最先选择相应产品</span>
+                        </td>
+                        <td rowspan="5" valign="top" width="390"
+                            style="border-left: #E6E6E6 solid 1px; line-height: 28px; color: #FF6600; padding-left: 8px; padding-top: 8px;">
+                            <strong>短信统计：</strong>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;条数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总条数
+                            <br>
+                            移动：<input type="text" id="cmbt" size="1" value="0" disabled=""> x <input type="text"
+                                                                                                     id="cmbs" size="4"
+                                                                                                     value="0"
+                                                                                                     disabled=""> =
+                            <input type="text" id="cmba" size="4" value="0" disabled="">
+                            <br>
+                            联通：<input type="text" id="cunt" size="1" value="0" disabled=""> x <input type="text"
+                                                                                                     id="cuns" size="4"
+                                                                                                     value="0"
+                                                                                                     disabled=""> =
+                            <input type="text" id="cuna" size="4" value="0" disabled="">
+                            <br>
+                            电信：<input type="text" id="ctt" size="1" value="0" disabled=""> x <input type="text" id="cts"
+                                                                                                    size="4" value="0"
+                                                                                                    disabled=""> =
+                            <input type="text" id="cta" size="4" value="0" disabled="">
+                            <br>
+                            合计：<input type="text" id="sumt" size="1" value="0" disabled=""> x <input type="text"
+                                                                                                     id="sums" size="4"
+                                                                                                     value="0"
+                                                                                                     disabled=""> =
+                            <input type="text" id="suma" size="4" value="0" disabled="">
+                            <br>
+                            <strong>注意：</strong>
+                            <br>
+                            1、单次提交最好不超过100万个号码。 <br>
+                            2、手动输入号码请用英文逗号(,)隔开。 <br>
+                            3、所有号码需写入本地的文件中然后导入。 <br>
+                            4、号码文件只支持TXT、EXCEL文件格式。<br>
+                            5、汉字、数字和英文都表示1个长度<br>
+                            6、短信内容实际长度=短信内容+【短信签名】<br>
+                            7、短信内容中避免出现【内容】
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">
+                            <div>短信内容：</div>
+                        </td>
+                        <td class="table-content" style="line-height:40px;padding-top:6px;" width="400" align="left">
+                            <textarea name="content" id="content"
+                                      style="border:1px solid #6E9FDE;width:380px;height:100px;" rows="5"></textarea>
+                            <div style="line-height:20px;clear:both;margin-top:5px;">
+	                        	<span id="message">内容：
+	                        	<font color="red" id="counter_input">0</font>
+	                        	字符+签名<font color="red" id="mark">0</font>个字符=<font
+                                            style="color:red;font-family : Constantia,Georgia;font-size:18px;"
+                                            id="counter_sum">0</font>
+	                        	字符,还剩<font color="red" id="counter_follow">500</font>
+	                        	,移动/联通/电信每条<font style="color:red;font-family : Constantia,Georgia;font-size:18px;"
+                                                 id="counter_code">70</font>
+	                        	,内容限制:<font color="red" id="counter_all">500</font>。</span>
+                                <br>
+                                普通短信<font color="red" id="counter_all">70</font>字符
+                                ,长短信<font color="red" id="counter_all">67</font>字符,为一条计费。
+                            </div>
+                            <div style="width:380px;clear:both;">
+                                <input name="btnAdd2" id="common" class="button" type="button" value="常用短信">
+                                <input name="btnAddSms" id="btnAddSms" class="button" type="button" value="保存草稿"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">预定发送时间：</td>
+                        <td class="table-content">
+	                        <span>
+	                        	<input id="send_time" name="send_time" type="text" class="Wdate"
+                                       onclick="onClick=WdatePicker()">
+	                        </span>
+                            <span style="line-height:34px;">若为空，表示立即发送。</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <div>手机号码：</div>
+                        </td>
+                        <td class="table-content">
+                            <textarea name="mobile" id="mobile" style="border:1px solid #6E9FDE;width:380px; height:85px; margin-bottom:5px;"
+                                      rows="6"></textarea>
+                            <div style="width:380px;clear:both;">
+                                <input name="imptxt" id="imptxt" class="button" style="margin-bottom:3px;"
+                                       onclick="ajaximporttxt();" type="button" value="TXT导入">
+                                <input name="impexcel" id="impexcel" class="button"
+                                       style="margin-bottom:3px;margin-left:5px;"
+                                       type="button" value="EXCEL导入" disabled="">
+                                <input name="removeerr" id="removeerr" class="button"
+                                       style="margin-bottom:3px;margin-left:5px;"
+                                       type="button" title="过滤错误号码" value="过滤错号">
+                                <input name="removesame" id="removesame" class="button"
+                                       style="margin-bottom:3px;margin-left:5px;"
+                                       type="button" title="过滤重复号码" value="重号过滤">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="table-content">
+                            <div>
+                                <input type="hidden" name="signature" id="signature" value="">
+                                <input type="hidden" name="ssuuname" id="ssuuname" value="gezhuncs">
+                                <input type="hidden" name="sendsms_send_charge" id="sendsms_send_charge">
+                                <input type="hidden" name="sendsms_count" id="sendsms_count">
+                                <input type="hidden" name="vali_flag" id="vali_flag" value="0">
+                                <input type="hidden" name="basePath" id="basePath" value="index.html">
+                                <input name="btnAdd" id="btnAdd" class="button" type="submit" value="发送短信" disabled="">
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</article>
 </body>
 </html>

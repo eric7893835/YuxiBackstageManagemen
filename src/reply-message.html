@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/other-comon.css">
+
+    <!--时间控件-->
+    <script src="lib/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+<header class="maintitle">
+    <div class="maintip">
+        <i>&#xe629;</i>
+        <span class="address-info"><strong>位置：</strong>回复短信</span>
+    </div>
+</header>
+
+<!--主要内容-->
+<article class="content-box role">
+    <div class="content-box-content">
+        <span style="font-size: 13px;color: red;margin-bottom: 10px;"></span>
+        <div class="searchgrid">
+            用户名：<input type="text" name="user_username" id="user_username" value="">
+            手机号码：<input type="text" name="mobile" id="mobile" value="">
+            回复内容：<input type="text" name="content" id="content" value="">
+            起始时间：<input id="beg_time" name="beg_time" style="width:110px" type="text" value="" class="Wdate" onclick="WdatePicker({maxDate:'%y-%M-%d %H:%m:%s',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:true})">
+            结束时间：<input id="end_time" name="end_time" style="width:110px" type="text" value="" class="Wdate" onclick="WdatePicker({maxDate:'%y-%M-%d %H:%m:%s',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:true})">
+            <input type="submit" value="查询 " name="Submit" class="button">
+            <input type="button" class="button" value="批量删除">
+            <input type="button" class="button" value="导出全部">
+        </div>
+
+
+        <div class="tab-content style-2" style="display: block;">
+            <table width="100%">
+                <thead>
+                <tr>
+                    <th>选择<br><input type="checkbox" id="checkContent"></th>
+                    <th>用户名</th>
+                    <th>手机号码</th>
+                    <th>回复内容</th>
+                    <th>信息ID</th>
+                    <th>回复时间</th>
+                    <th>推送返回值</th>
+                    <th>推送地址</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="11">
+                        <div class="pagination">
+                            <a>共有 <b>0条/0页</b> </a>
+                            <a class="number" href="">首页</a>
+                            <a class="number">上一页</a>
+
+                            <a class="number">下一页</a>
+                            <a class="number" href="">尾页</a>
+                            <input type="text" size="3" value="1" id="pageindex">
+                            <input type="button" class="button" value="跳 转">
+                        </div>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</article>
+</body>
+</html>

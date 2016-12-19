@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/other-comon.css">
+</head>
+<body>
+<header class="maintitle">
+    <div class="maintip">
+        <i>&#xe629;</i>
+        <span class="address-info"><strong>位置：</strong>添加联系组</span>
+    </div>
+</header>
+
+<!--主要内容-->
+<article class="content-box role">
+    <div class="content-box-content">
+
+        <form name="contactform" method="get" class="hori-form" action="#">
+            <div class="tab-content  style-2">
+                <table width="100%">
+                    <thead>
+                    <tr>
+                        <th colspan="2" style="text-align:left;">
+                            <div class="conTitle">&nbsp;&nbsp;添加联系组信息</div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody><tr>
+                        <td class="t21" width="“30%”" style="text-align:right;">&nbsp;组名：</td>
+                        <td class="t21" style="text-align:left;">
+                            <input type="text" name="sys_groupname" value="">
+                            <font color="red">*</font>
+                            <input type="hidden" name="sys_group_userid" value="">
+                            <span id="groupnameInfo" class="warning" style="display:none;"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="text-align:left;">
+                            <input type="submit" name="submit" value="提交" class="button">
+                            <input class="button" type="button" value="返  回" onclick="history.back()">
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </div>
+        </form>
+    </div>
+</article>
+</body>
+</html>

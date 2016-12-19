@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/other-comon.css">
+</head>
+<body>
+<header class="maintitle">
+    <div class="maintip">
+        <i>&#xe629;</i>
+        <span class="address-info"><strong>位置：</strong>添加联系人</span>
+    </div>
+</header>
+
+<!--主要内容-->
+<article class="content-box role">
+    <div class="content-box-content">
+        <form name="form1" action="#" method="post">
+            <div class="tab-content  style-2">
+                <table width="100%">
+                    <tbody>
+
+                    <tr>
+                        <td>姓&nbsp;&nbsp;&nbsp;&nbsp;名</td>
+                        <td>
+                            <input type="text" id="address_name" name="address_name" value="">
+                            <span class='red'>*</span>
+                        </td>
+                        <td>手机号码</td>
+                        <td>
+                            <input type="text" id="address_phone" name="address_phone" value="">
+                            <span id="numInfo" class="warning" style="display: none;"></span>
+                            <span class='red'>*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>电子邮箱</td>
+                        <td>
+                            <input type="text" id="address_email" name="address_email" value="">
+                        </td>
+                        <td>家庭住址</td>
+                        <td>
+                            <input type="text" name="address_home" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>QQ/MSN</td>
+                        <td>
+                            <input type="text" name="address_qqmsn" value="">
+                        </td>
+                        <td>性别</td>
+                        <td>
+                            <select name="address_sex">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>生日</td>
+                        <td>
+                            <input type="text" name="address_birthday" value="" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                        </td>
+                        <td>分组</td>
+                        <td>
+                            <select id="sys_groupname" name="sys_groupname">
+                            </select>
+                            <span class='red'>*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>职业</td>
+                        <td>
+                            <input type="text" name="address_profession" value="">
+                        </td>
+                        <td>公司</td>
+                        <td>
+                            <input type="text" name="address_company" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>部门</td>
+                        <td>
+                            <input type="text" name="address_department" value="">
+                        </td>
+                        <td>城市</td>
+                        <td>
+                            <input type="text" name="address_city" value="">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>岗位</td>
+                        <td>
+                            <input type="text" name="address_post" value="">
+                        </td>
+                        <td>备注</td>
+                        <td>
+                            <input type="text" name="Address_remark" value="">
+                            <input type="hidden" name="address_userid" value="">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="100%" align="center" colspan="8">
+                            <div align="center">
+                                <input type="submit" class="button" name="submit" value="提交">
+                                <input type="button" class="button" name="return" value="返回" onclick="history.back()">
+                                <input type="button" class="button" value="Excel批量导入" >
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</article>
+</body>
+</html>

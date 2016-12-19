@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/other-comon.css">
+</head>
+<body>
+<header class="maintitle">
+    <div class="maintip">
+        <i>&#xe629;</i>
+        <span class="address-info"><strong>位置：</strong>联系人列表</span>
+    </div>
+</header>
+
+<!--主要内容-->
+<article class="content-box role">
+    <div class="content-box-content">
+        <div class="searchgrid">
+            <div class="searchgrid">
+                <p class="searchgrid">
+                    <a href="address-book.html">联系人列表</a>
+                    &nbsp;&nbsp;
+                    <a href="ct-list.html">联系组列表</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="add-linkman.html">添加联系人</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="add-ct.html">添加联系组</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="sources/exp.xls">导出通讯录</a>
+                    </p>
+            </div>
+            <div style="float: left;">
+                通讯录模版导入下载地址：
+                <a href="sources/import.xls"><span class='red'>模版一</span></a>&nbsp;&nbsp;
+                <a href="sources/import.xls"><span class='red'>模版二</span></a>
+            </div>
+            <form action="#" method="post">
+                <div align="right">
+                    <label>
+                        公司
+                    </label>
+                    <input type="text" name="address_company" value="" style="width: 80px;">
+                    <label>
+                        姓名
+                    </label>
+                    <input type="text" name="address_name" value="" style="width: 80px;">
+                    <label>
+                        电话号码
+                    </label>
+                    <input type="text" name="address_phone" value="">
+                    <label>
+                        联系组名称：
+                    </label>
+                    <select id="sys_groupname" name="sys_groupname" style="line-height: 30px; height: 24px; padding-top: 3px; padding-bottom: 3px;">
+                        <option value="0">-选择分组-</option>
+                    </select>
+                    <input type="submit" class="button" value="查询">
+                    <input type="button" class="button" value="批量删除">
+                </div>
+                <div>全部联系人<input type="checkbox" id="check Content" name="address_number" value="checkAll"></div>
+            </form></div>
+        <div class="tab-content  style-2">
+            <table width="100%">
+                <thead>
+                <tr bgcolor="CAE8EA">
+                    <th>
+                        <input type="checkbox" id="checkContent" name="choose">选择
+                    </th>
+                    <th>
+                    公司
+                    </th>
+                    <th>
+                        姓名
+                    </th>
+                    <th>
+                        性别
+                    </th>
+                    <th>
+                        移动电话
+                    </th>
+                    <th>
+                        地址
+                    </th>
+                    <th>
+                        电子邮箱
+                    </th>
+                    <th>
+                        所属组
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td colspan="9">
+                        <input type="button" class="button" value="发送短信">
+                        <!--  <input type="button" class="button" value="发送彩信" onclick="javascript:xx()" style="margin-left: 50px;"/> -->
+                    </td>
+                </tr>
+                </tbody>
+
+                <tfoot>
+                <tr>
+                    <td colspan="9">
+                        <div class="pagination">
+                            <a>共有 <b>0条/0页</b> </a>
+                            <a class="number" href="">首页</a>
+                            <a class="number">上一页</a>
+
+                            <a class="number">下一页</a>
+                            <a class="number" href="">尾页</a>
+                            <input type="text" size="3" value="1" id="pageindex">
+                            <input type="button" class="button" value="跳 转">
+                        </div>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</article>
+</body>
+</html>

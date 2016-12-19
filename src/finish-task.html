@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/other-comon.css">
+
+    <!--时间控件-->
+    <script src="lib/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+<header class="maintitle">
+    <div class="maintip">
+        <i>&#xe629;</i>
+        <span class="address-info"><strong>位置：</strong>已完成任务</span>
+    </div>
+</header>
+
+<!--主要内容-->
+<article class="content-box role">
+    <div class="content-box-content">
+        <div class="searchgrid">
+            <strong>查询时间段：</strong>
+            <select name="flag" id="flag">
+                <option value="1" selected="selected">最近四天</option>
+                <option value="2">四天前</option>
+            </select>
+
+            <strong>子用户名：</strong><input type="text" name="child_username" id="child_username" value="" style="width:50px;">
+
+            <strong>手机号码：</strong><input type="text" name="sendsms_phone" id="sendsms_phone" value="" style="width:100px;" size="11" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+            <strong>任务ID：</strong><input type="text" name="tasksms_id" id="tasksms_id" value="" style="width:50px;" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+            <strong>发送内容：</strong><input type="text" name="sendsms_content" id="sendsms_content" value="" style="width:70px;">
+            <strong>起始时间：</strong><input id="beg_time" name="beg_time" style="width:120px" type="text" value="2016-12-19" class="Wdate" onclick="WdatePicker()">
+            <strong>结束时间：</strong><input id="end_time" name="end_time" style="width:120px" type="text" value="2016-12-19" class="Wdate" onclick="WdatePicker()">
+            <input type="submit" value="查询 " name="Submit" class="button">
+            <input type="button" name="Submit" class="button" value="清  除">
+        </div>
+        <div class="tab-content style-2" style="height: 1000px;">
+            <table id="table">
+                <thead>
+                <tr>
+                    <th>任务ID</th>
+                    <th>发送人</th>
+                    <th>计费条数</th>
+                    <th>选用产品</th>
+
+                    <th>消息ID</th>
+                    <th>创建时间</th>
+
+                    <th>操作</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="9">
+                        <div class="pagination">
+                            <a>共有 <b>0条/0页</b> </a>
+                            <a class="number" href="">首页</a>
+                            <a class="number">上一页</a>
+
+                            <a class="number">下一页</a>
+                            <a class="number" href="">尾页</a>
+                            <input type="text" size="3" value="1" id="pageindex">
+                            <input type="button" class="button" value="跳 转">
+                        </div>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div></article>
+</body>
+</html>

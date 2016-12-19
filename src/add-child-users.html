@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/other-comon.css">
+</head>
+<body>
+<header class="maintitle">
+    <div class="maintip">
+        <i>&#xe629;</i>
+        <span class="address-info"><strong>位置：</strong>开通子客户</span>
+    </div>
+</header>
+
+<!--主要内容-->
+<article class="content-box role">
+    <div class="content-box-content">
+        <div id="form" class="tab-content default-tab" style="display: block;">
+            <form method="post" action="#">
+                <table width="100%" class="style-3">
+                    <tbody>
+                    <tr>
+                        <td class='label' style="width: 100px;">真实姓名:</td>
+                        <td class='table-content' style="width: 500px;"><input type="text" name="user_name" value="" onkeyup="value=value.replace(/[\d]/g,'')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='label'>用户名/账号:</td>
+                        <td class='table-content'>
+                            <input type="text" name="user_username" value="" class="required" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')">
+                            <span class='red'>*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='label'>密码:</td>
+                        <td class='table-content'>
+                            <input type="password" name="user_password" id="user_password" value="" maxlength="15">
+                            <span class='red'>* 注：密码必须为：英文字母大写+英文字母小写+数字组成(不少于8个字符)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='label'>手机号:</td>
+                        <td class='table-content'>
+                            <input type="text" name="user_phone" id="user_phone"><span class='red'>*</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='label'>邮箱/Email:</td>
+                        <td class='table-content'><input type="text" name="user_email" value="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='label'>地址:</td>
+                        <td class='table-content'><input type="text" name="user_addres">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class='label'>签名:</td>
+                        <td class='table-content'>
+                            <input type="text" name="signature" value="">
+                        </td>
+                    </tr>
+
+
+
+                    <input type="hidden" name="user_small_id" id="user_small_id" value="0">
+
+                    <tr>
+                        <td class='label'>小号:</td>
+                        <td class='table-content'>
+                            <font>若该账号需要回复功能，在开通用户后，请联系相应的客服为本账号添加小号,谢谢您的配合！</font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="100%" align="center" colspan="3">
+                            <div align="center">
+                                <input type="submit" value="保存用户" class="button" id="button" name="button">
+                                <input type="button" value="返回列表 " class="button">
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</article>
+</body>
+</html>

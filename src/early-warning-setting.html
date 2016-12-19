@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/other-comon.css">
+</head>
+<body>
+<header class="maintitle">
+    <div class="maintip">
+        <i>&#xe629;</i>
+        <span class="address-info"><strong>位置：</strong>短信预警值设置</span>
+    </div>
+</header>
+
+<!--主要内容-->
+<article class="content-box role">
+    <div class="content-box-content">
+        <input type="button" value="返 回 " class="button" onclick="history.back();" style="margin-top: 5px;float: right;">
+        <form action="#" method="post" name="my">
+            <div id="form" class="tab-content default-tab" style="display: block;">
+                <table width="100%" class="style-3">
+                    <tbody>
+                    <tr>
+                        <td class="label">用户名：</td>
+                        <td class="table-content"><input type="text" name="user_username" id="user_username" value="gezhuncs">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">是否设置预警：</td>
+                        <td class="table-content">
+                            <input type="radio" name="balance_alarm" value="1" checked="checked">否 &nbsp;
+                            <input type="radio" name="balance_alarm" value="2">是
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">预警条数：</td>
+                        <td class="table-content"><input type="text" name="sum_alarm" id="sum_alarm" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">通知联系人：</td>
+                        <td class="table-content"><input type="text" name="notice_name" id="notice_name" value="">
+                            <span class="red">&nbsp;&nbsp;多个联系人请用中文逗号(，)分隔(最多填写三个联系人)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">通知联系人号码：</td>
+                        <td class="table-content"><input type="text" name="notice_phone" id="notice_phone" value="" style="width:320px">&nbsp;&nbsp;
+                            <span class="red">多个手机号码请用中文逗号(，)分隔(姓名与手机号码个数必须相等)</span></td>
+                    </tr>
+
+                    <tr>
+                        <td width="100%" align="center" colspan="4">
+                            <div align="center" style="margin-left: 60px;">
+                                <input type="submit" value="保存" class="button" id="btnAdd" name="btnAdd">
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</article>
+</body>
+</html>

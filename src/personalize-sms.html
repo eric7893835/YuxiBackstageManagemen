@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/other-comon.css">
+
+    <!--时间控件-->
+    <script src="lib/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+<header class="maintitle">
+    <div class="maintip">
+        <i>&#xe629;</i>
+        <span class="address-info"><strong>位置：</strong>个性化短信【剩余短信条数：<span class="red">18</span>】</span>
+    </div>
+</header>
+
+<!--主要内容-->
+<article class="content-box role">
+    <div class="content-box-content">
+        <div class="tab-content default-tab" id="form" style="display: block; ">
+            <form id="submitfrom" action=" " method="post">
+                <table cellspacing="0" cellpadding="0" width="100%" border="0" height="100%">
+                    <tbody>
+                    <tr>
+                        <td class="label">选择产品：</td>
+                        <td class="table-content">
+	                        <span>
+	                        	<select name="pro_id" id="pro_id" >
+                                    <option value="" selected="selected">请选择相应的产品</option>
+
+                                    <option value="33">优质验证码专用</option>
+
+                                    <option value="19">商超会员营销4</option>
+
+                                    <option value="5">管理商通知专用</option>
+
+                                </select>
+	                        </span>
+                            <span style="line-height:34px;">发送短信时请最先选择相应产品</span>
+                        </td>
+                        <td rowspan="8" valign="top" width="150" style="border-left: #E6E6E6 solid 1px; line-height: 28px; color: #FF6600; padding-left: 8px; padding-top: 8px;">
+
+                            <strong>注意：</strong>
+                            <br>
+                            1、单次提交不超过50W条记录。 <br>
+                            2、号码文件只支持EXCEL文件格式。<br>
+                            3、汉字、数字和英文都表示1个长度<br>
+                            4、短信内容实际长度=[短信签名]+短信内容
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">上传内容：</td>
+                        <td class="table-content">
+                            <input type="button" class="button" value="Excel导入" >
+                            &nbsp;&nbsp; 模板下载:
+                            <a href="javascript:void(0)"><font color="red">模板下载</font></a>
+                            （注：请先下载模版，根据模版编辑完成内容后进行上传，即可自定义您的个性化短信）
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <div style="line-height:30px;margin-bottom:30px;">文件内容预览：</div>
+                        </td>
+                        <td  class="table-content">
+                            <div>
+                                <div id="str">
+                                    <table class="tel-list">
+                                        <thead>
+                                        <tr><th>号码列表</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr>
+                                        </thead>
+                                        <tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                        </tbody></table>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">
+                            <div >短信模版：</div>
+                        </td>
+                        <td class="table-content">
+                            <textarea name="content" id="content" style="border:1px solid #6E9FDE;width:380px;height:55px;" rows="5"></textarea>
+                            &nbsp;&nbsp;<br>
+                            <input type="checkbox" name="checkbox" id="check1" value="{Phone}">号码&nbsp;
+                            <input type="checkbox" name="checkbox" id="check2" value="{A}">A&nbsp;
+                            <input type="checkbox" name="checkbox" id="check3" value="{B}">B&nbsp;
+                            <input type="checkbox" name="checkbox" id="check4" value="{C}">C&nbsp;
+                            <input type="checkbox" name="checkbox" id="check5" value="{D}">D&nbsp;
+                            <input type="checkbox" name="checkbox" id="check6" value="{E}">E&nbsp;
+
+                            <font color="red">(注：预览的内容是按照选择的顺序进行显示)</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">待发送内容预览：</td>
+                        <td class="table-content"><textarea name="content1" id="content1" style="border:1px solid #6E9FDE;width:380px;height:85px;" rows="5"></textarea>
+
+                            <div style="line-height:20px;clear:both;margin-top:5px;">
+                        	<span id="message">内容：
+                        	<font color="red" id="counter_input">0</font>
+                        	字符+签名<font color="red" id="mark">0</font>个字符=<font color="red" id="counter_sum">0</font>
+                        	字符,还剩<font color="red" id="counter_follow">500</font>
+                        	,移动/联通/电信每条<font color="red" id="counter_code">70</font>
+                        	,内容限制:<font color="red" id="counter_all">500</font></span>
+                            </div>
+                            <!--  <div style="width:380px;clear:both;">
+                              <input name="btnAdd2" id="common" class="button" type="button" value="常用短信" onclick="ajaxgeneralsms();">
+                              <input name="btnAddSms" id="btnAddSms" class="button" type="button" value="保存草稿" onclick="ajaxsavedraft();">
+                              </div> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">预定发送时间：</td>
+                        <td class="table-content">
+	                        <span>
+	                        	<input id="send_time" name="send_time" style="width:135px" type="hidden" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'%y-%M-%d %H:{%m+10}:%s'})">
+	                        </span>
+                            <span style="line-height:34px;">若为空，表示立即发送。</span></td>
+                    </tr>
+                    <tr>
+                        <td class="label"></td>
+                        <td class="table-content">
+                            <!-- <div align="left" style="padding-bottom:4px;padding-top:4px;"></div> -->
+                            <input type="hidden" name="signature" id="signature" value="">
+                            <input type="hidden" name="sendsms_send_charge" id="sendsms_send_charge">
+                            <input type="hidden" name="sendsms_count" id="sendsms_count" value="0">
+                            <input type="hidden" name="valiflag" id="vali_flag" value="0">
+                            <input type="hidden" name="counter_code_value" id="counter_code_value" value="0">
+                            <input type="hidden" name="basePath" id="basePath" value="http://www.ztsms.cn">
+                            <input name="btnAdd" id="btnAdd" class="button" type="submit" value="发送短信  "><font color="red"></font>
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </form>
+        </div>
+    </div>
+</article>
+</body>
+</html>
